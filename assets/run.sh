@@ -1,7 +1,7 @@
 #!/bin/bash
 
-echo $MAILNAME > /etc/mailname
-postconf -e myhostname=$MAILNAME
+echo $MYHOSTNAME > /etc/mailname
+postconf -e myhostname=$MYHOSTNAME
 postconf -e mynetworks=172.16.0.0/12
 touch /var/log/mail.log
 chown syslog:adm /var/log/mail.log
