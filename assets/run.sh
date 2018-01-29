@@ -2,7 +2,7 @@
 
 echo $MAILNAME > /etc/mailname
 postconf -e myhostname=$MAILNAME
-postconf -e mynetworks=172.17.0.0/16
+postconf -e mynetworks=172.16.0.0/12
 touch /var/log/mail.log
 chown syslog:adm /var/log/mail.log
 service rsyslog start
